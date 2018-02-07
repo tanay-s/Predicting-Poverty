@@ -39,7 +39,7 @@ def train(file, rescale=False, treat_imb=False, k=0):
     else:
         features = None
 
-    xgb = XGBClassifier(n_estimators=70)
+    xgb = XGBClassifier(n_estimators=100)
     xgb.fit(train, labels_tr)
     preds = xgb.predict_proba(val)
     loss = log_loss(labels_val, preds)
