@@ -49,6 +49,15 @@ def rescale(df, type='minmax'):
     rescaled_data.columns = df.columns
     return rescaled_data
 
+def find_missing_values(df):
+    def num_missing(x):
+        return sum(x.isnull())
+
+    pd.set_option("display.max_rows", 999) #uncomment to display all columns
+    missing_values_per_column = df.apply(num_missing, axis=0)
+    print (missing_values_per_column)
+    print('Number of missing values:', sum(missing_values_per_column))
+
 def missing_data(df, missing_features, remove_features):
 
     if remove_features!=[]:
