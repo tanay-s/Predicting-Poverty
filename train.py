@@ -86,15 +86,15 @@ def output_format(file, predictions):
 
 
 if __name__ == '__main__':
-    estimator, features = train('A_hhold_train', treat_imb=False)
+    estimator, features = train('A_hhold_train', treat_imb=True)
     preds = infer('A_hhold_test', estimator)
     out1 = output_format('A_hhold_test', preds)
 
-    estimator, features = train('B_hhold_train', treat_imb=False)
+    estimator, features = train('B_hhold_train', treat_imb=True)
     preds = infer('B_hhold_test', estimator)
     out2 = output_format('B_hhold_test', preds)
 
-    estimator, features = train('C_hhold_train', treat_imb=False)
+    estimator, features = train('C_hhold_train', treat_imb=True)
     preds = infer('C_hhold_test', estimator)
     out3 = output_format('C_hhold_test', preds)
 
