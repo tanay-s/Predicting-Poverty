@@ -2,9 +2,6 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import RobustScaler
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error
-from sklearn.linear_model import Lasso
 from imblearn.over_sampling import SMOTE
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import f_classif
