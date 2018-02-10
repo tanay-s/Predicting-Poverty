@@ -49,8 +49,7 @@ def rescale(df, type='minmax'):
     rescaled_data.columns = df.columns
     return rescaled_data
 
-def missing_data(df, missing_features = ['BXOWgPgL', 'McFBIGsm', 'BRzuVmyf', 'OSmfjCbE'],
-                remove_features = ['umkFMfvA','FGWqGkmD','IrxBnWxE','dnlnKrAg','aAufyreG']):
+def missing_data(df, missing_features, remove_features):
 
     if remove_features!=[]:
         df.drop(remove_features, axis=1, inplace=True)
